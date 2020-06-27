@@ -1,0 +1,44 @@
+<div class="container-sm">
+  <form [formGroup]="formCreateUser">
+    <div class="form-group">
+      <input type="hidden" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        formControlName="name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        formControlName="email"
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        formControlName="password"
+      />
+    </div>
+    <div class="modal-footer">
+      <button
+        (click)="createUser(formCreateUser.value)"
+        type="button"
+        class="btn btn-primary"
+        data-dismiss="modal"
+      >
+        Save changes
+      </button>
+    </div>
+  </form>
+</div>
